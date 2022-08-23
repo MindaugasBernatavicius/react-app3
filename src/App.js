@@ -9,12 +9,12 @@ import SequentialStateUpdates from "Components/SequentialStateUpdates/Sequential
 import Top10Movies from "Components/Top10Movies/Top10Movies";
 import WorstMovies from "Components/WorstMovies/WorstMovies";
 import React from "react";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Header />
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
@@ -31,7 +31,7 @@ const App = () => {
         <Route path="/bp" element={<Blogposts />} />
         <Route path="*" element={<Navigate to="/home" />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 export default App;
